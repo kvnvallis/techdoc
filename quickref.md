@@ -1,0 +1,70 @@
+# Quick reference
+
+[TOC]
+
+
+## Django
+
+* `python manage.py shell` : Open a django shell where you can import models
+* `from appname.models import ModelName` : Import a model in the shell
+
+
+## Pacman
+
+* `pacman -Qo /usr/bin/appname` : Query what package a file belongs to
+
+
+## Vscode
+
+* `Ctrl-Shift-K` : Delete current line
+
+
+## Bash
+
+* `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
+* `<(echo 'file contents')` : Pass the output of a command to another command that expects a file
+* `set -x` : Print all commands before executing them (does not wait before execution)
+
+### Parameter Expansion
+
+* `${filename#*.}` : Get the file extension from a standard filename
+* `${filename%.*}` : Remove the file extension from a standard filename
+
+
+## Python
+
+* `autopep8 -i scriptfile.py` : Format your python code and replace the file
+* `python -m virtualenv ./myvenv` : Create a virtualenv
+* `source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
+
+
+## PyInstaller
+
+* `pyinstaller --clean --onefile myproject.py` : compile a single linux binary from a python script
+
+
+## Pyenv
+
+* `pyenv install -l` : show all python versions available for install
+* `pyenv activate myenv` : activate a virtual environment by name
+* `pyenv deactivate` : deactivate a virtual environment
+* `pyenv virtualenv 3.6.6 myenv` : create a virtual environment with python version and env name
+* `pyenv uninstall myenv` : delete a virtual environment by its name
+* `env PYTHON_CONFIGURE_OPTS="--enable-shared" LD_LIBRARY_PATH="$HOME/.pyenv/versions/3.6.6/lib/" pyenv install 3.6.6` : compile a python version for compatibility with pyinstaller
+
+
+## Git
+
+* `git restore --staged .` : Unstage changes / Undo a git add
+* `git checkout .` : Revert unstaged changes to most recent commit
+* `git reset --hard HEAD~1` : Revert to the commit before the most recent commit
+
+
+## Vim
+
+* `:%y+` : copy current file to clipboard
+* `ctrl-w q` : close split window
+* `ctrl-w o` or `:only` : close all other split windows
+* `:source ~/.vimrc` : to reload your vimrc file
+* `1-ctrl-g` : Show the name of the current file with full path
+

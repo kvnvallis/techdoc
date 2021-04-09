@@ -78,18 +78,18 @@ Python
 
 ### Patch a method to return a mock object
 
-When using a patch decorator with `side_effect` as a mock object, you must remember to enclose the value of `side_effect` in square brackets. If you don't, you might receive an unhelpful error like this one:
+When using a patch decorator with *side_effect* as a mock object, you must remember to enclose the value of *side_effect* in square brackets. If you don't, you might receive an unhelpful error like this one:
 
     AssertionError: <Mock name='Mocked response from the tvdb[31 chars]280'> != {'links': {'first': 1, 'last': 2, 'next':[141077 chars] 0}]} 
 
-In hindsight, it's clear that what's happening here is `side_effect` returns what the mock object returns, instead of returning the mock object itself. Type `Mock()` in a python terminal and you'll see what I mean.
+In hindsight, it's clear that what's happening here is *side_effect* returns what the mock object returns, instead of returning the mock object itself. Type `Mock()` in a python terminal and you'll see what I mean.
 
-To make the method return a mock object, the patch decorator can use `side_effect=[response_mocked]` or `return_value=response_mocked`. The benefit of using `side_effect` is you can specify other effects in the list that will be returned for each subsequent call to the method. Here we are patching the `get` method of the `requests` module.
+To make the method return a mock object, the patch decorator can use *side_effect=[response_mocked]* or *return_value=response_mocked*. The benefit of using *side_effect* is you can specify other effects in the list that will be returned for each subsequent call to the method. Here we are patching the *get* method of the *requests* module.
 
 - `@patch.object(tvfile.requests, 'get', return_value=response_mock)`
 - `@patch.object(tvfile.requests, 'get', side_effect=[response_mock])`
 
-Since you have to define `response_mock` before assigning it to `side_effect`, you won't be able to use the above examples unless `response_mock` is defined outside the scope of your test function (before it, in the test class). If `response_mock` is defined *inside* your test function, you can patch the method like so:
+Since you have to define *response_mock* before assigning it to *side_effect*, you won't be able to use the above examples unless *response_mock* is defined outside the scope of your test function (before it, in the test class). If *response_mock* is defined inside your test function, you can patch the method like so:
 
     @patch('tvfile.requests')
     def test_get_episodes_success(self, mock_requests):

@@ -16,6 +16,9 @@
 
 ## Vscode
 
+* `Ctrl-]` or `[` : Indent or unindent highlighted code
+* `Ctrl-K Ctrl-C` : Comment out highlighted code block
+* `Ctrl-K Ctrl-U` : Uncomment code block
 * `Ctrl-Shift-K` : Delete current line
 
 
@@ -62,6 +65,7 @@
 
 ## Vim
 
+* `/\C` : case sensitive search (lowercase c to ignore case)
 * `:%y+` : copy current file to clipboard
 * `ctrl-w q` : close split window
 * `ctrl-w o` or `:only` : close all other split windows

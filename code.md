@@ -9,6 +9,34 @@ Notes and documentation on python and other languages
 Django
 ------
 
+### Passing arguments between views
+
+Django is designed to accept arguments to a view that are included within the URL. Generic views know to accept arguments by default, but you still have to define them elsewhere.
+
+In the django tutorial's "polls" app, the question id is passed to the detail view from within the index template. Because the variable is defined as `pk` in the urls file, the detail view accepts it as an argument. 
+
+    # file: urls.py
+    path('<int:pk>/', views.DetailView.as_view(), name='detail') 
+
+    # file: index.html
+    <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+
+    # file: views.py
+    class DetailView(generic.DetailView):
+        model = Question
+        template_name = 'polls/detail.html'
+
+If you don't use a generic view, you can write your own views function; In which case you can name the variable whatever you want, but you have to define the parameter within your function.
+
+    # file: urls.py
+    path('<int:question_id>/', views.detail, name='detail') 
+
+    # file: views.py
+    def detail(request, question_id):
+        question = Question.objects.get(pk=question_id)
+        return render(request, 'polls/detail.html', {'question': question})
+
+
 ### (Don't) Delete your migrations
 
 __NOTE__: I thought this fixed my problem, but afterward I realized that no new changes to the models were being detected by `makemigrations`. So, migrations are still broken, but differently now.
@@ -47,6 +75,30 @@ The django tutorial lets you know that returning a redirect is important for whe
 
 Python
 ------
+
+### Patch a method to return a mock object
+
+When using a patch decorator with `side_effect` as a mock object, you must remember to enclose the value of `side_effect` in square brackets. If you don't, you might receive an unhelpful error like this one:
+
+    AssertionError: <Mock name='Mocked response from the tvdb[31 chars]280'> != {'links': {'first': 1, 'last': 2, 'next':[141077 chars] 0}]} 
+
+In hindsight, it's clear that what's happening here is `side_effect` returns what the mock object returns, instead of returning the mock object itself. Type `Mock()` in a python terminal and you'll see what I mean.
+
+To make the method return a mock object, the patch decorator can use `side_effect=[response_mocked]` or `return_value=response_mocked`. The benefit of using `side_effect` is you can specify other effects in the list that will be returned for each subsequent call to the method. Here we are patching the `get` method of the `requests` module.
+
+- `@patch.object(tvfile.requests, 'get', return_value=response_mock)`
+- `@patch.object(tvfile.requests, 'get', side_effect=[response_mock])`
+
+Since you have to define `response_mock` before assigning it to `side_effect`, you won't be able to use the above examples unless `response_mock` is defined outside the scope of your test function (before it, in the test class). If `response_mock` is defined *inside* your test function, you can patch the method like so:
+
+    @patch('tvfile.requests')
+    def test_get_episodes_success(self, mock_requests):
+        """get_episodes returns an unmodified response object"""
+        response_mock = Mock(name='Mocked response from the tvdb api')
+        response_mock.status_code = 200
+        response_mock.json.return_value = send_episodes('1')
+        mock_requests.get.side_effect = [response_mock]
+
 
 ### Pretty-print json to stdout
 

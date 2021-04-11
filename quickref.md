@@ -71,4 +71,20 @@
 * `ctrl-w o` or `:only` : close all other split windows
 * `:source ~/.vimrc` : to reload your vimrc file
 * `1-ctrl-g` : Show the name of the current file with full path
+* `:bd` or `:bw` : close file without quitting vim
 
+## Windows
+
+* `super-x u s` : sleep the computer without a mouse
+
+### Chocolatey
+
+* `choco list -l` : list all locally installed packages
+* `choco outdated` : list outdated packages
+
+### Notepad++
+
+- `CTRL + L`    delete line and copy to clipboard
+- `CTRL + SHIFT + L`    delete line but don't copy to clipboard
+- `SHIFT + TAB`     Un-indent (works for highlighted blocks too)
+- `CTRL + D`    duplicate line on next line

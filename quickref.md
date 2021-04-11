@@ -70,7 +70,7 @@
 * `ctrl-w q` : close split window
 * `ctrl-w o` or `:only` : close all other split windows
 * `:source ~/.vimrc` : to reload your vimrc file
-* `1-ctrl-g` : Show the name of the current file with full path
+* `1 ctrl-g` : Show the name of the current file with full path
 * `:bd` or `:bw` : close file without quitting vim
 
 ## Windows

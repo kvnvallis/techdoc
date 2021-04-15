@@ -113,6 +113,10 @@ If you read the response with `r.content` or `r.text` you should use `json.loads
     p = json.loads(r.content)
     print(json.dumps(...))
 
+To print out json in bash, use *json.tool*.
+
+    python -m json.tool tests/data/seinfeld-episodes-page-1.json
+
 
 ### `__file__` variable only works on import ###
 

@@ -1,9 +1,41 @@
-Programming Languages
-=====================
-
-Notes and documentation on python and other languages
+Programming
+===========
 
 [TOC]
+
+
+Git
+---
+
+### Rebase two unrelated histories
+
+You have two branches, *feature* and *main*, where you want all the changes in main to be brought into the history of feature. The branches are unrelated (common was created as an orphan), and feature has a long commit history; So if you checkout feature and run `git rebase common`, you will have to deal with many conflicts as git replays the entire history of feature. 
+
+My solution was to squash all commits on feature into one, so that I only have to deal with conflicts on the most recent changes. This obviously only works if you don't care about preserving the commit history. 
+
+    git checkout feature
+    git rebase --root -i
+
+Then edit the todo so that the oldest commit is reworded and the rest are squashed (`s` or `f`) up to the latest commit.
+
+    1 r 01cc5a08 Removes open div
+    2 s a2b6eecf Restores old fonts
+    3 s 603479ff Cleans left out div
+    4 s 5afdbc33 Update: show logo on landing page 
+
+Or if you're running the newest version of git (2.31.1 for me), you can pass in the oldest commit to `rebase` and squash everything in the todo. Earlier versions of git will complain about there being "no previous commit" if you try this, because it expects you to `pick` at least one.
+
+    $ git rebase -i 01cc5a08
+
+    1 f 01cc5a08 Removes open div
+    2 f a2b6eecf Restores old fonts
+    3 f 603479ff Cleans left out div
+    4 f 5afdbc33 Update: show logo on landing page 
+
+When you have just one commit on feature, you can then easily rebase onto common (modifying the history of feature, but leaving the history of common alone.)
+
+    git checkout feature
+    git rebase common
 
 
 Django

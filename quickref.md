@@ -58,6 +58,7 @@
 
 ## Git
 
+* `git ls-tree -r HEAD --name-only` : Show all committed files on current branch
 * `git restore --staged .` : Unstage changes / Undo a git add
 * `git checkout .` : Revert unstaged changes to most recent commit
 * `git reset --hard HEAD~1` : Revert to the commit before the most recent commit

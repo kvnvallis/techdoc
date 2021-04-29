@@ -16,10 +16,12 @@
 
 ## Vscode
 
+* `Ctrl-Shift-P` : Open command pallette
 * `Ctrl-]` or `[` : Indent or unindent highlighted code
 * `Ctrl-K Ctrl-C` : Comment out highlighted code block
 * `Ctrl-K Ctrl-U` : Uncomment code block
 * `Ctrl-Shift-K` : Delete current line
+* `Ctrl-X` : Delete line and copy to clipboard
 
 
 ## Bash
@@ -44,6 +46,11 @@
 ## PyInstaller
 
 * `pyinstaller --clean --onefile myproject.py` : compile a single linux binary from a python script
+
+
+## Virtualenvwrapper
+
+- `mkvirtualenv -p $HOME/.pyenv/versions/3.9.4/bin/python projectname` : create a virtualenv
 
 
 ## Pyenv

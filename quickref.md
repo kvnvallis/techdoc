@@ -35,12 +35,18 @@
 * `${filename#*.}` : Get the file extension from a standard filename
 * `${filename%.*}` : Remove the file extension from a standard filename
 
+### Screen
+
+- `screen -dmS session-name bash -c 'echo hello world; exec bash'` : Run a command in a detached screen terminal and keep it alive with exec bash
+
 
 ## Python
 
-* `autopep8 -i scriptfile.py` : Format your python code and replace the file
-* `python -m virtualenv ./myvenv` : Create a virtualenv
-* `source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
+* `>>> [n for n in iterable if re.match(".*searchstring", n)]` : Filter a list of strings
+* `>>> inspect.signature(the_function)` : Display parameters of a function
+* `$ autopep8 -i scriptfile.py` : Format your python code and replace the file
+* `$ python -m virtualenv ./myvenv` : Create a virtualenv
+* `$ source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
 
 
 ## PyInstaller

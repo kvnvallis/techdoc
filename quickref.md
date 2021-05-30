@@ -6,7 +6,7 @@
 ## Wine
 
 * `wine cmd` : Load cmd.exe using stdin/out/err
-* `wineconsole cmd` : Load cmd.exe CUI in new window
+* `wineconsole` : Load cmd.exe CUI in new window
 
 
 ## Django

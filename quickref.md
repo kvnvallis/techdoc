@@ -3,6 +3,12 @@
 [TOC]
 
 
+## Wine
+
+* `wine cmd` : Load cmd.exe using stdin/out/err
+* `wineconsole cmd` : Load cmd.exe CUI in new window
+
+
 ## Django
 
 * `python manage.py shell` : Open a django shell where you can import models

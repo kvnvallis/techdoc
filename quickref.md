@@ -11,6 +11,7 @@
 
 ## Django
 
+* `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
 * `python manage.py shell` : Open a django shell where you can import models
 * `from appname.models import ModelName` : Import a model in the shell
 
@@ -32,6 +33,7 @@
 
 ## Bash
 
+* `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
 * `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
 * `<(echo 'file contents')` : Pass the output of a command to another command that expects a file
 * `set -x` : Print all commands before executing them (does not wait before execution)

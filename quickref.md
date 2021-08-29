@@ -33,6 +33,8 @@
 
 ## Bash
 
+* `Alt-B / Alt-F` : Back/forward one word
+* `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line
 * `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
 * `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
 * `<(echo 'file contents')` : Pass the output of a command to another command that expects a file
@@ -79,6 +81,7 @@
 
 ## Git
 
+* `git push origin --delete my-feature-branch` : Delete remote branch
 * `git ls-tree -r HEAD --name-only` : Show all committed files on current branch
 * `git restore --staged .` : Unstage changes / Undo a git add
 * `git checkout .` : Revert unstaged changes to most recent commit

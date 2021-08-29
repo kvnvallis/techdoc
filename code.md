@@ -41,6 +41,37 @@ When you have just one commit on feature, you can then easily rebase onto common
 Django
 ------
 
+## Templates
+
+You tried to point to a template and got a `TemplateDoesNotExist` error. The key here is in `settings.py`.
+
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [],
+            'APP_DIRS': True,
+
+`APP_DIRS: True` tells django to look in `yourapp/templates/` for template files. You can add other dirs in the DIRS list, but there is no need. 
+
+If you followed the django tutorial's example your templates are currently in `yourapp/templates/yourapp/`, so you would point to them like this:
+
+    {% include 'yourapp/header.html' %}
+
+Here's why the seemingly redundant _yourapp_ folder (Source: <https://docs.djangoproject.com/en/3.2/intro/tutorial03/#write-views-that-actually-do-something>)
+
+> Now we might be able to get away with putting our
+> templates directly in polls/templates (rather than
+> creating another polls subdirectory), but it would
+> actually be a bad idea. Django will choose the first
+> template it finds whose name matches, and if you had a
+> template with the same name in a different application,
+> Django would be unable to distinguish between them. We
+> need to be able to point Django at the right one, and the
+> best way to ensure this is by namespacing them. That is,
+> by putting those templates inside another directory named
+> for the application itself.
+
+
 ## Automate checking for migrations
 
 You can write a script to check if migrations exist for any change made to the models. Use the `--check` flag with `showmigrations` to make manage.py exit with a nonzero status when there is a change in the models and migrations have not yet been created. When the models and migrations are in sync, that's considered a success (exit 0). 

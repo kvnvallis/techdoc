@@ -41,7 +41,7 @@ When you have just one commit on feature, you can then easily rebase onto common
 Django
 ------
 
-## Templates
+## Template Paths
 
 You tried to point to a template and got a `TemplateDoesNotExist` error. The key here is in `settings.py`.
 

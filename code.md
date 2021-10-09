@@ -4,6 +4,39 @@ Programming
 [TOC]
 
 
+JavaScript
+----------
+
+### Cycle through a list and repeat
+
+Show the first item in the list. When you click the button, change the index to show the next item. Instead of just incrementing *i*, set it to equal the remainder of *(i + 1)* divided by *the length of the list*. 
+
+    i = (i + 1) % mylist.length
+
+The following code will:
+
+1. Return a remainder equal to the dividend *i + 1*, 
+2. until *i + 1* is equal to *animals.length* (i.e. 4 % 4), 
+3. at which point a remainder of 0 is returned.
+
+---
+
+    const animals = ['giraffe', 'baboon', 'hummingbird', 'caribou']
+    let i = 0
+    $('.animal-name').html(animals[i])
+
+    $('button.cycle').click( () => {
+        i = (i + 1) % animals.length
+        $('.animal-name').html(animals[i])
+    })
+
+Even if you manually set *i* to equal an integer outside the range of the list, the equation will only return values within the acceptable range (in this case, [0-3]), because the remainder can never be greater than or equal to the divisor.
+
+    >>> i = 4
+    >>> (i + 1) % 4
+    1
+
+
 Git
 ---
 

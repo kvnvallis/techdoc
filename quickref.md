@@ -2,6 +2,13 @@
 
 [TOC]
 
+## Godot
+
+_Fix blurry sprites :_
+
+1. Select sprite file in __FileSystem__ tab
+2. Under __Import__ tab, uncheck __Filter: On__, click __Reimport__
+
 
 ## Wine
 
@@ -90,6 +97,7 @@
 
 ## Vim
 
+* INSERT `ctrl-u` : remove all characters to left of cursor
 * `/\C` : case sensitive search (lowercase c to ignore case)
 * `:%y+` : copy current file to clipboard
 * `ctrl-w q` : close split window

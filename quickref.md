@@ -4,10 +4,20 @@
 
 ## Godot
 
-_Fix blurry sprites :_
+Note that code in a GD script takes precedence over what you set in the UI. 
 
-1. Select sprite file in __FileSystem__ tab
-2. Under __Import__ tab, uncheck __Filter: On__, click __Reimport__
+---
+
+___Change viewport resolution and scale :___
+
+    func _ready():
+        get_tree().set_screen_stretch(2, 1, Vector2(320, 240)) 
+
+- __Project__ menu > __Project Settings__ > __General__ tab > __Display__ then __Window__ in sidebar, set __Width__ and __Height__, set __Mode: *Viewport*__, and __Aspect: *Keep*__
+
+___Fix blurry sprites :___
+
+- Select sprite file in __FileSystem__ tab, then under __Import__ tab, uncheck __Filter: On__, click __Reimport__
 
 
 ## Wine

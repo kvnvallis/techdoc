@@ -50,6 +50,7 @@ ___Fix blurry sprites :___
 
 ## Bash
 
+* `cat -A` : Show tabs, newlines, and carriage returns
 * `Alt-B / Alt-F` : Back/forward one word
 * `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line
 * `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__

@@ -105,6 +105,13 @@ ___Fix blurry sprites :___
 * `git checkout .` : Revert unstaged changes to most recent commit
 * `git reset --hard HEAD~1` : Revert to the commit before the most recent commit
 
+### Config
+
+- `core.autocrlf true` : checkout as CRLF, commit as LF
+    - `core.safecrlf false` : suppress misleading warnings about CRLF conversion
+- `core.autocrlf input` : checkout as LF, commit as LF
+- `core.autocrlf false` : no conversions on checkout or commit
+
 
 ## Vim
 

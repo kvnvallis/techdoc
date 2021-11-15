@@ -2,6 +2,13 @@
 
 [TOC]
 
+
+## ffmpeg
+
+- __PS3 Compatibility__ : `-i file.mkv -map 0:v -map 0:a -c copy -map_chapters -1 file.mp4` : Change container from mkv to mp4, remove chapters, copy only audio and video streams, do not re-encode
+- __Retroarch Web Standard__ : `-i file.mkv -vcodec h264 -acodec aac -crf 1 -pix_fmt yuv420p file.mp4` : Convert a yuv444 low-res mkv recorded in retroarch to an html video mp4 at highest quality to eliminate artifacts
+
+
 ## Godot
 
 Note that code in a GD script takes precedence over what you set in the UI. 

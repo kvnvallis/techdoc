@@ -74,6 +74,30 @@ When you have just one commit on feature, you can then easily rebase onto common
 Django
 ------
 
+- __manage.py__ is a wrapper script for the __django-admin__ command
+
+
+## Create a super user
+
+If this isn't a brand new project, first check if a super user already exists.
+
+    $ python manage.py shell
+    >>> from django.contrib.auth.models import User
+    >>> User.objects.all()
+    <QuerySet []>
+
+An empty queryset means there are no users at all. If users do exist, you can filter for superuser.
+
+    >>> User.objects.filter(is_superuser=True)
+    <QuerySet [<User: admin>]>
+
+When you're sure a superuser needs to be created, use this command:
+
+    $ python manage.py createsuperuser
+
+Now login with the admin account at `localhost:8000/admin`.
+
+
 ## Template Paths
 
 You tried to point to a template and got a `TemplateDoesNotExist` error. The key here is in `settings.py`.

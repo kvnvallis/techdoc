@@ -110,7 +110,7 @@ You tried to point to a template and got a `TemplateDoesNotExist` error. The key
 
 `APP_DIRS: True` tells django to look in `yourapp/templates/` for template files. You can add other dirs in the DIRS list, but there is no need. 
 
-If you followed the django tutorial's example your templates are currently in `yourapp/templates/yourapp/`, so you would point to them like this:
+If you followed the django tutorial's example your templates are currently in `yourapp/templates/yourapp/`, so you would point to them (from another template) like this:
 
     {% include 'yourapp/header.html' %}
 

@@ -74,7 +74,8 @@ When you have just one commit on feature, you can then easily rebase onto common
 Django
 ------
 
-- __manage.py__ is a wrapper script for the __django-admin__ command
+- The double-underscore WHERE filters are called [Field Lookups](https://docs.djangoproject.com/en/stable/ref/models/querysets/#field-lookups) and all of them are listed in the QuerySet API reference.
+- __manage.py__ is a wrapper script for the __django-admin__ command.
 
 
 ## Create a super user

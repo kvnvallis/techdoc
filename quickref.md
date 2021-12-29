@@ -5,6 +5,7 @@
 
 ## ffmpeg
 
+- __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv``
 - __2-Channel AC3__: `ffmpeg -i file.mkv -map 0:a:0 -ar 44100 -ac 2 -c:a ac3 -b:a 224k`
 - __Extract Subtitles__: `ffmpeg -i file.mkv -map 0:s:0 -c:s text subs.srt`
 - __PS3 Compatibility__ : `ffmpeg -i file.mkv -map 0:v -map 0:a -c copy -map_chapters -1 file.mp4` : Change container from mkv to mp4, remove chapters, copy only audio and video streams, do not re-encode

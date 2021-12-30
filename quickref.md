@@ -5,7 +5,7 @@
 
 ## ffmpeg
 
-- __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv``
+- __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv`
 - __2-Channel AC3__: `ffmpeg -i file.mkv -map 0:a:0 -ar 44100 -ac 2 -c:a ac3 -b:a 224k`
 - __Extract Subtitles__: `ffmpeg -i file.mkv -map 0:s:0 -c:s text subs.srt`
 - __PS3 Compatibility__ : `ffmpeg -i file.mkv -map 0:v -map 0:a -c copy -map_chapters -1 file.mp4` : Change container from mkv to mp4, remove chapters, copy only audio and video streams, do not re-encode
@@ -19,16 +19,16 @@ Note that code in a GD script takes precedence over what you set in the UI.
 
 ---
 
-___Change viewport resolution and scale :___
+__Change viewport resolution and scale:__
 
     func _ready():
         get_tree().set_screen_stretch(2, 1, Vector2(320, 240)) 
 
-- __Project__ menu > __Project Settings__ > __General__ tab > __Display__ then __Window__ in sidebar, set __Width__ and __Height__, set __Mode: *Viewport*__, and __Aspect: *Keep*__
+- _Project_ menu > _Project Settings_ > _General_ tab > _Display_ then _Window_ in sidebar, set _Width_ and _Height_, set _Mode: Viewport_, and _Aspect: Keep_
 
-___Fix blurry sprites :___
+__Fix blurry sprites:__
 
-- Select sprite file in __FileSystem__ tab, then under __Import__ tab, uncheck __Filter: On__, click __Reimport__
+- Select sprite file in _FileSystem_ tab, then under _Import_ tab, uncheck _Filter: On_, click _Reimport_
 
 
 ## Wine
@@ -136,6 +136,12 @@ ___Fix blurry sprites :___
 * `:bd` or `:bw` : close file without quitting vim
 
 ## Windows
+
+__Stop mouse from waking computer:__
+
+* _Control Panel_ > _Mouse_ > _Hardware_ tab > select _HID-compliant mouse_ > _Properties_ > _Change Settings_ > _Power Management_ tab > uncheck _Allow this device to wake the computer_
+
+---
 
 * `super-x u s` : sleep the computer without a mouse
 

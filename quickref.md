@@ -126,6 +126,7 @@ __Fix blurry sprites:__
 
 ## Vim
 
+* `:%retab!`: change file's indentation to tabs when _noexpandtab_ and _tabstop_ set
 * INSERT `ctrl-u` : remove all characters to left of cursor
 * `/\C` : case sensitive search (lowercase c to ignore case)
 * `:%y+` : copy current file to clipboard
@@ -135,15 +136,17 @@ __Fix blurry sprites:__
 * `1 ctrl-g` : Show the name of the current file with full path
 * `:bd` or `:bw` : close file without quitting vim
 
+
 ## Windows
+
+* `super-x u s` : sleep the computer without a mouse
+
+---
 
 __Stop mouse from waking computer:__
 
 * _Control Panel_ > _Mouse_ > _Hardware_ tab > select _HID-compliant mouse_ > _Properties_ > _Change Settings_ > _Power Management_ tab > uncheck _Allow this device to wake the computer_
 
----
-
-* `super-x u s` : sleep the computer without a mouse
 
 ### Chocolatey
 

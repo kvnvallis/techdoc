@@ -110,6 +110,7 @@ __Fix blurry sprites:__
 
 ## Git
 
+* `git branch1 branch2 file.txt` : Compare same file between branches
 * `git push origin --delete my-feature-branch` : Delete remote branch
 * `git ls-tree -r HEAD --name-only` : Show all committed files on current branch
 * `git restore --staged .` : Unstage changes / Undo a git add

@@ -61,6 +61,7 @@ __Fix blurry sprites:__
 
 ## Bash
 
+* `useradd -r -s /sbin/nologin username` : Create a system user for running services (do not create home folder)
 * `cat -A` : Show tabs, newlines, and carriage returns
 * `Alt-B / Alt-F` : Back/forward one word
 * `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line

@@ -61,6 +61,7 @@ __Fix blurry sprites:__
 
 ## Bash
 
+* `sudo -i -u username` : Open a login shell like with _su - username_
 * `useradd -r -s /sbin/nologin username` : Create a system user for running services (do not create home folder)
 * `cat -A` : Show tabs, newlines, and carriage returns
 * `Alt-B / Alt-F` : Back/forward one word

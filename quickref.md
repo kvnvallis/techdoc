@@ -9,7 +9,7 @@
 - __2-Channel AC3__: `ffmpeg -i file.mkv -map 0:a:0 -ar 44100 -ac 2 -c:a ac3 -b:a 224k`
 - __Extract Subtitles__: `ffmpeg -i file.mkv -map 0:s:0 -c:s text subs.srt`
 - __PS3 Compatibility__ : `ffmpeg -i file.mkv -map 0:v -map 0:a -c copy -map_chapters -1 file.mp4` : Change container from mkv to mp4, remove chapters, copy only audio and video streams, do not re-encode
-- __Divx (SMS PS2)__ : `ffmpeg -i file.mkv -q:v 4 -b:a 320k -s 640x480 file.avi`: Transcode high def 4:3 mkv to standard def avi at qscale 4 for highest quality without lag over samba; not suitable for USB 1.1
+- __Divx Player (USB 2.0)__ : `ffmpeg -i file.mkv -q:a 3 -b:v 2M -maxrate:v 3.5M -vtag xvid -vf scale=640:-1,setsar=1:1 file.avi`: Transcode high def mkv to standard def avi and limit bitrate < 4000k
 - __Retroarch Web MP4__ : `ffmpeg -i file.mkv -pix_fmt yuv420p -crf 1 -s 512x480 -sws_flags neighbor -b:a 320k file.mp4` : Start with lossless retroarch recording, encode and scale from yuv444p to yuv420p, double original resolution from 256x240 to compensate for scaling artifacts, use nearest neighbor scaling for sharp pixels
 
 

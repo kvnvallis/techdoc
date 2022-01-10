@@ -59,8 +59,10 @@ __Fix blurry sprites:__
 * `Ctrl-X` : Delete line and copy to clipboard
 
 
-## Bash
+## Bash / Linux
 
+* `ssh -N -D 9999 user@host` : start a socks proxy with no shell
+* `sudo netstat -nltp` / `ss -nltp` : show addresses and ports for running services
 * `sudo -i -u username` : Open a login shell like with _su - username_
 * `useradd -r -s /sbin/nologin username` : Create a system user for running services (do not create home folder)
 * `cat -A` : Show tabs, newlines, and carriage returns

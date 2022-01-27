@@ -132,8 +132,9 @@ __Fix blurry sprites:__
 
 ## Vim
 
-* `:set list` / `nolist`: show listchars like tabs and newlines
-* `:%retab!`: change file's indentation to tabs when _noexpandtab_ and _tabstop_ set
+* `:hi Error NONE` : disable error highlighting
+* `:set list` / `nolist` : show listchars like tabs and newlines
+* `:%retab!` : change file's indentation to tabs when _noexpandtab_ and _tabstop_ set
 * INSERT `ctrl-u` : remove all characters to left of cursor
 * `/\C` : case sensitive search (lowercase c to ignore case)
 * `:%y+` : copy current file to clipboard

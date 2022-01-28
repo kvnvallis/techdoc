@@ -61,6 +61,8 @@ __Fix blurry sprites:__
 
 ## Bash / Linux
 
+* `diff -u oldfile newfile > patchfile` : create a patch file
+* `patch -u oldfile -i patchfile` : apply a patch file
 * `ssh -N -D 9999 user@host` : start a socks proxy with no shell
 * `sudo netstat -nltp` / `ss -nltp` : show addresses and ports for running services
 * `sudo -i -u username` : Open a login shell like with _su - username_

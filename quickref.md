@@ -98,18 +98,16 @@ __Fix blurry sprites:__
 * `$ python -m virtualenv ./myvenv` : Create a virtualenv
 * `$ source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
 
-
-## PyInstaller
+### PyInstaller
 
 * `pyinstaller --clean --onefile myproject.py` : compile a single linux binary from a python script
 
+### Virtual Environments
 
-## Virtualenvwrapper
+- `python -m venv ~/Pyvenvs/projectname` : Create env the recommended way as of 3.5
+- `mkvirtualenv -p $HOME/.pyenv/versions/3.9.4/bin/python projectname` : create env with virtualenvwrapper
 
-- `mkvirtualenv -p $HOME/.pyenv/versions/3.9.4/bin/python projectname` : create a virtualenv
-
-
-## Pyenv
+### Pyenv
 
 * `pyenv install -l` : show all python versions available for install
 * `pyenv activate myenv` : activate a virtual environment by name
@@ -117,6 +115,12 @@ __Fix blurry sprites:__
 * `pyenv virtualenv 3.6.6 myenv` : create a virtual environment with python version and env name
 * `pyenv uninstall myenv` : delete a virtual environment by its name
 * `env PYTHON_CONFIGURE_OPTS="--enable-shared" LD_LIBRARY_PATH="$HOME/.pyenv/versions/3.6.6/lib/" pyenv install 3.6.6` : compile a python version for compatibility with pyinstaller
+
+### Django
+
+* `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
+* `python manage.py shell` : Open a django shell where you can import models
+* `from appname.models import ModelName` : Import a model in the shell
 
 
 ## Git

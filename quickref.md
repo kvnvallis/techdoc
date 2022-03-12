@@ -42,13 +42,6 @@ __Fix blurry sprites:__
 * `wineconsole` : Load cmd.exe CUI in new window
 
 
-## Django
-
-* `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
-* `python manage.py shell` : Open a django shell where you can import models
-* `from appname.models import ModelName` : Import a model in the shell
-
-
 ## Pacman
 
 * `pacman -Qo /usr/bin/appname` : Query what package a file belongs to
@@ -98,6 +91,12 @@ __Fix blurry sprites:__
 * `$ python -m virtualenv ./myvenv` : Create a virtualenv
 * `$ source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
 
+### Django
+
+* `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
+* `python manage.py shell` : Open a django shell where you can import models
+* `from appname.models import ModelName` : Import a model in the shell
+
 ### PyInstaller
 
 * `pyinstaller --clean --onefile myproject.py` : compile a single linux binary from a python script
@@ -115,12 +114,6 @@ __Fix blurry sprites:__
 * `pyenv virtualenv 3.6.6 myenv` : create a virtual environment with python version and env name
 * `pyenv uninstall myenv` : delete a virtual environment by its name
 * `env PYTHON_CONFIGURE_OPTS="--enable-shared" LD_LIBRARY_PATH="$HOME/.pyenv/versions/3.6.6/lib/" pyenv install 3.6.6` : compile a python version for compatibility with pyinstaller
-
-### Django
-
-* `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
-* `python manage.py shell` : Open a django shell where you can import models
-* `from appname.models import ModelName` : Import a model in the shell
 
 
 ## Git

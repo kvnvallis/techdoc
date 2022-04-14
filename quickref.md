@@ -82,6 +82,10 @@ __Fix blurry sprites:__
 
 - `screen -dmS session-name bash -c 'echo hello world; exec bash'` : Run a command in a detached screen terminal and keep it alive with exec bash
 
+### Other
+
+- `pandoc -s file.docx --wrap=none -t markdown -o file.md` : Convert word doc to markdown
+
 
 ## Python
 

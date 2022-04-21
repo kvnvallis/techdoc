@@ -122,6 +122,7 @@ __Fix blurry sprites:__
 
 ## Git
 
+* `git tag archive/mybranch mybranch; git push origin archive/mybranch` : archive a branch using tags
 * `git branch -vv` : show tracking branches next to local branches
 * `git diff branch1 branch2 file.txt` : Compare same file between branches
 * `git push origin --delete my-feature-branch` : Delete remote branch

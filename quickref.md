@@ -126,6 +126,7 @@ __Fix blurry sprites:__
 * `git branch -vv` : show tracking branches next to local branches
 * `git diff branch1 branch2 file.txt` : Compare same file between branches
 * `git push origin --delete my-feature-branch` : Delete remote branch
+* `git push origin :my-feature-branch` : Delete a remote branch the old way
 * `git ls-tree -r HEAD --name-only` : Show all committed files on current branch
 * `git restore --staged .` : Unstage changes / Undo a git add
 * `git checkout .` : Revert unstaged changes to most recent commit

@@ -1,11 +1,9 @@
-Programming
-===========
+# Programming
 
 [TOC]
 
 
-JavaScript
-----------
+## JavaScript
 
 ### Cycle through a list and repeat
 
@@ -37,8 +35,7 @@ Even if you manually set *i* to equal an integer outside the range of the list, 
     1
 
 
-Git
----
+## Git
 
 ### Rebase two unrelated histories
 
@@ -71,14 +68,13 @@ When you have just one commit on feature, you can then easily rebase onto common
     git rebase common
 
 
-Django
-------
+## Django
 
 - The double-underscore WHERE filters are called [Field Lookups](https://docs.djangoproject.com/en/stable/ref/models/querysets/#field-lookups) and all of them are listed in the QuerySet API reference.
 - __manage.py__ is a wrapper script for the __django-admin__ command.
 
 
-## Create a super user
+### Create a super user
 
 If this isn't a brand new project, first check if a super user already exists.
 
@@ -99,7 +95,7 @@ When you're sure a superuser needs to be created, use this command:
 Now login with the admin account at `localhost:8000/admin`.
 
 
-## Template Paths
+### Template Paths
 
 You tried to point to a template and got a `TemplateDoesNotExist` error. The key here is in `settings.py`.
 
@@ -130,7 +126,7 @@ Here's why the seemingly redundant _yourapp_ folder (Source: <https://docs.djang
 > for the application itself.
 
 
-## Automate checking for migrations
+### Automate checking for migrations
 
 You can write a script to check if migrations exist for any change made to the models. Use the `--check` flag with `showmigrations` to make manage.py exit with a nonzero status when there is a change in the models and migrations have not yet been created. When the models and migrations are in sync, that's considered a success (exit 0). 
 
@@ -205,8 +201,19 @@ With default logging, you should also see a green POST 302 code in the console, 
 The django tutorial lets you know that returning a redirect is important for when the user hits the back button, potentially resending POST data, but it does not mention this odd behavior from the dev server.
 
 
-Python
-------
+
+## Python
+
+
+### Use pathlib instead of os.path.join
+
+    >>> from pathlib import Path
+    >>> Path('/tmp').resolve()
+    PosixPath('/tmp')
+    >>> p = Path('/tmp').resolve()
+    >>> p / 'media'
+    PosixPath('/tmp/media')
+
 
 ### Patch a method to return a mock object
 

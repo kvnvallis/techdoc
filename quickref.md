@@ -122,6 +122,7 @@ __Fix blurry sprites:__
 
 ## Git
 
+* `git cherry-pick -n <commit>` : don't commit the cherry-pick, just stage it
 * `git reflog` : show refs for hard resets so you can recover from them
 * `git tag archive/mybranch mybranch; git push origin archive/mybranch` : archive a branch using tags
 * `git branch -vv` : show tracking branches next to local branches

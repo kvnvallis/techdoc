@@ -64,6 +64,7 @@ __Fix blurry sprites:__
 * `ssh -N -L 8001:localhost:8000 user@host` : redirect local port 8001 to remote port 8000
 * `ssh -N -D 9999 user@host` : start a socks proxy with no shell
 * `sudo netstat -nltp` / `ss -nltp` : show addresses and ports for running services
+* `sudo -u username -s -E` : Open a shell as another user but preserve your env vars
 * `sudo -i -u username` : Open a login shell like with _su - username_
 * `useradd -r -s /sbin/nologin username` : Create a system user for running services (do not create home folder)
 * `cat -A` : Show tabs, newlines, and carriage returns

@@ -8,7 +8,7 @@
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps
 - `ffprobe -analyzeduration 100M -probesize 100M dvd.iso` : Seek ahead on disc to discover subtitle or other streams
 
-### recipes
+### encode recipes
 
 - __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv`
 - __2-Channel AC3__: `ffmpeg -i file.mkv -map 0:a:0 -ar 44100 -ac 2 -c:a ac3 -b:a 224k`
@@ -134,7 +134,8 @@ __Fix blurry sprites:__
 * `git ls-tree -r HEAD --name-only` : Show all committed files on current branch
 * `git restore --staged .` : Unstage changes / Undo a git add
 * `git checkout .` : Revert unstaged changes to most recent commit
-* `git reset --hard HEAD~1` : Revert to the commit before the most recent commit
+* `git reset --soft HEAD~1` : Go back one commit and keep changes to files
+* `git reset --hard HEAD~1` : Go back one commit and discard changes to files
 
 ### git config
 

@@ -91,6 +91,7 @@ __Fix blurry sprites:__
 
 ## Python
 
+* `$ pipdeptree -fl` : show dependency tree to identify core packages
 * `>>> [n for n in iterable if re.match(".*searchstring", n)]` : Filter a list of strings
 * `>>> inspect.signature(the_function)` : Display parameters of a function
 * `$ autopep8 -i scriptfile.py` : Format your python code and replace the file

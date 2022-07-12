@@ -161,8 +161,9 @@ __Fix blurry sprites:__
 
 - `F1` (in netrw) : show netrw help page
 - `:e ./` or `:Ex` / `:Vex` / `:Sex` : Open netrw in full or split modes
-* `:bd` or `:bw` : delete buffer (close file) without quitting vim
+* `:bd` or `:bw` : delete buffer (close file or tab) without quitting vim
 - `ctrl-6` / `:b#` : switch between previous and current buffer
+- `:enew` : Create a new empty buffer
 * `ctrl-w q` : close split window
 * `ctrl-w o` or `:only` : close all other split windows
 

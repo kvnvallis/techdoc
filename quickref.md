@@ -77,7 +77,7 @@ __Fix blurry sprites:__
 
 ### Parameter Expansion
 
-* `${filename#*.}` : Get the file extension from a standard filename
+* `${filename##*.}` : Get the file extension from a standard filename
 * `${filename%.*}` : Remove the file extension from a standard filename
 
 ### Screen

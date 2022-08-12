@@ -171,6 +171,7 @@ __Fix blurry sprites:__
 ## Windows
 
 * `super-x u s` : sleep the computer without a mouse
+- `mklink mylink mytarget` : create a symlink in cmd.exe (not powershell)
 
 ---
 

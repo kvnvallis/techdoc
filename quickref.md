@@ -8,11 +8,17 @@
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps
 - `ffprobe -analyzeduration 100M -probesize 100M dvd.iso` : Seek ahead on disc to discover subtitle or other streams
 
-### forloop
+### forloops
 
 Extract subtitles to same directory as video, with matching filenames.
 
     for i in ./*.mkv; do ffmpeg -i "$i" -map 0:s:0 -c:s text "./${i%.*}.en.srt"; done
+
+Mux streams from multiple input files. Remove audio from first file and copy audio from second file.
+
+    one=(../number1/*.mkv)
+    two=(../number2/*.mkv)
+    for i in "${!h264[@]}"; do ffmpeg -i "${h264[i]}" -i "${h265[i]}" -map 0 -map -0:a:0 -c copy -map 1:a:0 -c:a copy ./"$(basename "${h264[i]}")"; done
 
 ### encode recipes
 

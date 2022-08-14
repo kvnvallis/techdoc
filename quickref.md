@@ -8,6 +8,12 @@
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps
 - `ffprobe -analyzeduration 100M -probesize 100M dvd.iso` : Seek ahead on disc to discover subtitle or other streams
 
+## forloop
+
+Extract subtitles to same directory as video, with matching filenames.
+
+    for i in ./*.mkv; do ffmpeg -i "$i" -map 0:s:0 -c:s text "./${i%.*}.en.srt"; done
+
 ### encode recipes
 
 - __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv`

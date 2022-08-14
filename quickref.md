@@ -8,7 +8,7 @@
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps
 - `ffprobe -analyzeduration 100M -probesize 100M dvd.iso` : Seek ahead on disc to discover subtitle or other streams
 
-## forloop
+### forloop
 
 Extract subtitles to same directory as video, with matching filenames.
 

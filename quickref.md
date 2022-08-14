@@ -95,8 +95,6 @@ __Fix blurry sprites:__
 * `>>> [n for n in iterable if re.match(".*searchstring", n)]` : Filter a list of strings
 * `>>> inspect.signature(the_function)` : Display parameters of a function
 * `$ autopep8 -i scriptfile.py` : Format your python code and replace the file
-* `$ python -m virtualenv ./myvenv` : Create a virtualenv
-* `$ source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
 
 ### Django
 
@@ -112,6 +110,7 @@ __Fix blurry sprites:__
 
 - `python -m venv ~/Pyvenvs/projectname` : Create env the recommended way as of 3.5
 - `mkvirtualenv -p $HOME/.pyenv/versions/3.9.4/bin/python projectname` : create env with virtualenvwrapper
+* `source ./myenv/Scripts/activate` : Activate a virtualenv in BASH
 
 ### Pyenv
 

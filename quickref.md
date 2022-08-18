@@ -103,6 +103,8 @@ __Fix blurry sprites:__
 
 ## Python
 
+- `>>> ''.join(filter(lambda x : x in string.ascii_letters, '!My$Weird&Str#'))` : return string with only ascii letters
+- `>>> 'ab '.translate(str.maketrans('ab', 'yz', ' '))` : return string with a->y b->z and no spaces
 * `$ pipdeptree -fl` : show dependency tree to identify core packages
 * `>>> [n for n in iterable if re.match(".*searchstring", n)]` : Filter a list of strings
 * `>>> inspect.signature(the_function)` : Display parameters of a function
@@ -110,9 +112,10 @@ __Fix blurry sprites:__
 
 ### Django
 
+- `>>> list(Tags.objects.filter(mdfile_id=46).values_list('tag', flat=True))` : Create a list from queryset values
 * `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
 * `python manage.py shell` : Open a django shell where you can import models
-* `from appname.models import ModelName` : Import a model in the shell
+* `>>> from appname.models import ModelName` : Import a model in the shell
 
 ### PyInstaller
 

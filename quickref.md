@@ -141,7 +141,7 @@ __Fix blurry sprites:__
 
 * `git cherry-pick -n <commit>` : don't commit the cherry-pick, just stage it
 * `git reflog` : show refs for hard resets so you can recover from them
-* `git tag archive/mybranch mybranch; git push origin archive/mybranch` : archive a branch using tags
+* `git tag archive/mybranch mybranch; git push --tags` : archive a branch using tags
 * `git branch -vv` : show tracking branches next to local branches
 * `git diff branch1 branch2 file.txt` : Compare same file between branches
 * `git push origin --delete my-feature-branch` : Delete remote branch

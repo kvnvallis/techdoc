@@ -99,6 +99,7 @@ __Fix blurry sprites:__
 ### Other
 
 - `pandoc -s file.docx --wrap=none -t markdown -o file.md` : Convert word doc to markdown
+- `dpkg -L packagename` : List all files installed for package
 
 
 ## Python

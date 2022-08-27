@@ -105,6 +105,7 @@ __Fix blurry sprites:__
 
 - `pandoc -s file.docx --wrap=none -t markdown -o file.md` : Convert word doc to markdown
 - `dpkg -L packagename` : List all files installed for package
+- `sudo ufw allow in on eth0 from 192.168.1.0/24 to 192.168.1.2 port 8096 comment 'Jellyfin'`
 
 
 ## Python

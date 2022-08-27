@@ -30,6 +30,11 @@ Mux streams from multiple input files. Remove audio from first file and copy aud
 - __Retroarch Web MP4__ : `ffmpeg -i file.mkv -pix_fmt yuv420p -crf 1 -s 512x480 -sws_flags neighbor -b:a 320k file.mp4` : Start with lossless retroarch recording, encode and scale from yuv444p to yuv420p, double original resolution from 256x240 to compensate for scaling artifacts, use nearest neighbor scaling for sharp pixels
 
 
+### yt-dlp
+
+- `yt-dlp -f "bv[ext=mp4][height=1080]+ba[ext=m4a]"` : combine best 1080p h264 with best aac
+
+
 ## Godot
 
 Note that code in a GD script takes precedence over what you set in the UI. 

@@ -174,12 +174,16 @@ __FIX__: If you're going to delete all your migrations, you will then have to re
     python manage.py makemigrations appname
     python manage.py migrate --fake-initial
 
-__The part you shouldn't do__:
+__The part you shouldn't do:__
 
 Upon deleting a model and trying to run `migrate`, I kept getting an exception about a field in the (now missing) model. This may have happened because I never successfully migrated the model before I deleted it. Regardless, the solution was to delete my migrations.
 
 1. Delete migrations folder at `./appname/migrations/`
 2. `python manage.py dbshell` then `DELETE FROM django_migrations WHERE app = 'appname'`
+
+__When it's okay to delete migrations:___
+
+You haven't migrated them yet, or the migration failed. If migration 0006 failed, feel free to delete it and all migrations after 0006 (0007, 0008, etc.)
 
 
 ### Always redirect a POST request

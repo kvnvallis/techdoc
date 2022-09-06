@@ -76,6 +76,7 @@ __Fix blurry sprites:__
 
 ## Bash / Linux
 
+* `ls -i` ; `find / -inum [inode]` : List inodes then find inode (identify hard links)
 * `diff -u oldfile newfile > patchfile` : create a patch file
 * `patch -u oldfile -i patchfile` : apply a patch file
 * `ssh -N -L 8001:localhost:8000 user@host` : redirect local port 8001 to remote port 8000

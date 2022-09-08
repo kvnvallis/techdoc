@@ -162,6 +162,7 @@ __Fix blurry sprites:__
 
 ### git config
 
+- `git config --list --show-origin --global` : show git config (global, local, or system)
 - `core.autocrlf true` : checkout as CRLF, commit as LF
     - `core.safecrlf false` : suppress misleading warnings about CRLF conversion
 - `core.autocrlf input` : checkout as LF, commit as LF

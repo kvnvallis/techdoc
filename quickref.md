@@ -98,12 +98,9 @@ __Fix blurry sprites:__
 * `${filename##*.}` : Get the file extension from a standard filename
 * `${filename%.*}` : Remove the file extension from a standard filename
 
-### Screen
-
-- `screen -dmS session-name bash -c 'echo hello world; exec bash'` : Run a command in a detached screen terminal and keep it alive with exec bash
-
 ### Other
 
+- `screen -dmS session-name bash -c 'echo hello world; exec bash'` : Run a command in a detached screen terminal and keep it alive with exec bash
 - `pandoc -s file.docx --wrap=none -t markdown -o file.md` : Convert word doc to markdown
 - `dpkg -L packagename` : List all files installed for package
 - `sudo ufw allow in on eth0 from 192.168.1.0/24 to 192.168.1.2 port 8096 comment 'Jellyfin'`

@@ -3,6 +3,13 @@
 [TOC]
 
 
+## Regex
+
+- Notepad++ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 
+
+`^<div id=.*\R` (Perl) : Match single-line divs and any line ending
+
+
 ## ffmpeg
 
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps

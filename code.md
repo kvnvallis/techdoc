@@ -3,6 +3,44 @@
 [TOC]
 
 
+## React Native
+
+### Text style property
+
+The style option of the Text view takes a javascript object (dictionary) with key/value pairs that define style properties (like fontStyle, fontWeight, or fontSize). 
+
+    <Text style={
+      { fontSize: 30, fontWeight: 'bold' }
+    }>
+      Text goes here
+    </Text>
+
+But it can also take a list of objects. This way if you want to combine multiple style objects, you don't have to build a new object out of them. Remember the initial pair of curly braces is there to allow javascript execution.
+
+    <Text style={
+      [
+        { fontSize: 30, fontWeight: 'bold' },
+        { fontStyle: 'italics' }
+      ]
+    }>
+
+Passing a list of objects is useful when you have stylesheets defined.
+
+    <Text style={
+      [
+        styles.text,
+        { fontStyle: 'italics' }
+      ]
+    }>
+
+    const styles = StyleSheet.create({
+      text: {
+        fontSize: 30,
+        fontWeight: 'bold',
+      },
+    })
+
+
 ## JavaScript
 
 ### Cycle through a list and repeat

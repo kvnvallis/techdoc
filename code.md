@@ -5,6 +5,40 @@
 
 ## React Native
 
+### onPress property requires anonymous function
+
+For buttons or other pressables, there is an `onPress` property that lets you call a function when the button is pressed. However, if your handler function accepts an argument, then you will need to wrap the call to the handler function in an anonymous arrow function.
+
+    // handler function
+    const handleAddFighterSubmit = (fighter) => {
+      setAddFighterName(fighter)
+    } 
+
+    // onPress callback
+    <Button
+      title="Submit"
+      onPress={() => {
+        props.onAddFighterSubmit(name)
+      }}
+    />
+
+If the handler doesn't accept any arguments, you can call it directly.
+
+    const handleLogSubmitPress = () => {
+      console.log("Pressed Log Submit button")
+    }
+
+    <Button
+      title="Log Submit"
+      onPress={handleLogSubmitPress}
+    />
+
+    // console stdout
+    // LOG  Pressed Log Submit button
+
+The `onPress` property doesn't know to pass your argument to the handler function, and if you say `onPress={props.onAddFighterSubmit(name)` then you're calling the function at render time, instead of letting the Button component call your function when the the button is pressed. Compare this to TextInput's `onChangeText` property, that knows to pass the value of the text-input field as an argument.
+
+
 ### onSubmitEditing property of TextInput
 
 The TextInput component has two properties that allow you to get user input, `onChangeText` and `onSubmitEditing`. The former saves text as it is typed or deleted, and the latter saves text when the user hits return on the keyboard. 

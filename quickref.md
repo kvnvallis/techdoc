@@ -176,6 +176,7 @@ __Fix blurry sprites:__
 
 ## Vim
 
+* `:%s/\s\+$//` : delete trailing whitespace for all lines in file
 * `:hi Error NONE` : disable error highlighting
 * `:set list` / `nolist` : show listchars like tabs and newlines
 * `:%retab!` : change file's indentation to tabs when _noexpandtab_ and _tabstop_ set

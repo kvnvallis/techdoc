@@ -5,9 +5,20 @@
 
 ## React Native
 
+### onSubmitEditing property of TextInput
+
+The TextInput component has two properties that allow you to get user input, `onChangeText` and `onSubmitEditing`. The former saves text as it is typed or deleted, and the latter saves text when the user hits return on the keyboard. 
+
+onSubmitEditing seems like the obvious choice for submitting traditional forms, but there is no documented way to retrieve the user input, or to create a submit button (hitting enter is the only way). A stackoverflow post shows how to retrieve user input for a single field, by accessing `nativeEvent.text`:
+
+    onSubmitEditing={(name) => {
+      setName(name.nativeEvent.text)
+
+But I haven't found a way to create a button that triggers a keyboard event for the Enter key. So for now, keep using onChangeText to save the text in real time. 
+  
 ### Text style property
 
-The style option of the Text view takes a javascript object (dictionary) with key/value pairs that define style properties (like fontStyle, fontWeight, or fontSize). 
+The style option of the Text component takes a javascript object (dictionary) with key/value pairs that define style properties (like fontStyle, fontWeight, or fontSize). 
 
     <Text style={
       { fontSize: 30, fontWeight: 'bold' }

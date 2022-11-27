@@ -5,9 +5,13 @@
 
 ## Regex
 
-- Notepad++ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 
+Notepad++ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 
 
-`^<div id=.*\R` (Perl) : Match single-line divs and any line ending
+Vim uses its own flavor of regex that is similar in functionality to Perl. Enter search and replace strings as a command after typing `:`. End with `g` to apply to every match in a line. Prefix with `%` to apply to the entire file (e.g. `:%s`). Apply pattern to visually selected text by hitting `v`, selecting the text, then `:` to type the command, or hit up for a previous command. 
+
+- (perl) `^<div id=.*\R` : Match single-line divs and any line ending
+- (vim) `s/\s\+$//` : delete trailing whitespace for all lines in file
+- (vim) `s/\(.\+\)$/\1  /` : Add a double space to end of each non-empty line
 
 
 ## ffmpeg
@@ -176,7 +180,6 @@ __Fix blurry sprites:__
 
 ## Vim
 
-* `:%s/\s\+$//` : delete trailing whitespace for all lines in file
 * `:hi Error NONE` : disable error highlighting
 * `:set list` / `nolist` : show listchars like tabs and newlines
 * `:%retab!` : change file's indentation to tabs when _noexpandtab_ and _tabstop_ set

@@ -3,6 +3,18 @@
 [TOC]
 
 
+## Java
+
+### JUnit Tests
+
+The following commands will compile a java file containing junit tests and imports, then run the tests. 
+
+    $ javac -d ./compile -classpath junit-platform-console-standalone-1.9.1.jar -sourcepath ./ TestCard.java
+    $ java -jar junit-platform-console-standalone-1.9.1.jar --classpath ./compile --scan-classpath
+
+The standalone jar can be downloaded here <https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/>
+
+
 ## React Native
 
 ### onPress property requires anonymous function

@@ -180,6 +180,7 @@ __Fix blurry sprites:__
 
 ## Vim
 
+* `:tabm` : Move tab to front of queue
 * `:hi Error NONE` : disable error highlighting
 * `:set list` / `nolist` : show listchars like tabs and newlines
 * `:%retab!` : change file's indentation to tabs when _noexpandtab_ and _tabstop_ set

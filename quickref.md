@@ -5,9 +5,16 @@
 
 ## Regex
 
-Notepad++ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 
+___Notepad++___ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 
 
-Vim uses its own flavor of regex that is similar in functionality to Perl. Enter search and replace strings as a command after typing `:`. End with `g` to apply to every match in a line. Prefix with `%` to apply to the entire file (e.g. `:%s`). Apply pattern to visually selected text by hitting `v`, selecting the text, then `:` to type the command, or hit up for a previous command. 
+___Vim___ uses its own flavor of regex that is similar in functionality to Perl. 
+
+- Enter search and replace strings as a command after typing `:`
+- End with `g` to apply to every match in a line.
+- Prefix with `%` to apply to the entire file (e.g. `:%s`).
+- Apply pattern to visually selected text by hitting `v`, selecting the text, then `:` to type the command, or hit up for a previous command. 
+
+---
 
 - (perl) `^<div id=.*\R` : Match single-line divs and any line ending
 - (vim) `s/\s\+$//` : delete trailing whitespace for all lines in file

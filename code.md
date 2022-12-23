@@ -221,17 +221,6 @@ Here's why the seemingly redundant _yourapp_ folder (Source: <https://docs.djang
 > for the application itself.
 
 
-### Automate checking for migrations
-
-You can write a script to check if migrations exist for any change made to the models. Use the `--check` flag with `showmigrations` to make manage.py exit with a nonzero status when there is a change in the models and migrations have not yet been created. When the models and migrations are in sync, that's considered a success (exit 0). 
-
-    if python manage.py makemigrations --dry-run --check; then 
-        echo nothing to do
-    else
-        echo there are migrations to make
-    fi
-
-
 ### Passing arguments between views
 
 Django is designed to accept arguments to a view that are included within the URL. Generic views know to accept arguments by default, but you still have to define them elsewhere.

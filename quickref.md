@@ -187,6 +187,7 @@ __Fix blurry sprites:__
 
 ## Vim
 
+* `:qa` : close all tabs and quit
 * `:tabm` : Move tab to front of queue
 * `:hi Error NONE` : disable error highlighting
 * `:set list` / `nolist` : show listchars like tabs and newlines
@@ -199,13 +200,17 @@ __Fix blurry sprites:__
 
 ### netrw, windows, buffers
 
+* `:bd` or `:bw` : delete buffer (close file or tab) without quitting vim
+- `:%bd` : delete all buffers
+* `:tabo` : hide unfocused tabs (but the buffers remain)
+* `:ba` : open all buffers in split windows
+* `:on` or `:only` : hide unfocused split windows
+* `:tab ba` : open all buffers in separate tabs
+
 - `F1` (in netrw) : show netrw help page
 - `:e ./` or `:Ex` / `:Vex` / `:Sex` : Open netrw in full or split modes
-* `:bd` or `:bw` : delete buffer (close file or tab) without quitting vim
 - `ctrl-6` / `:b#` : switch between previous and current buffer
 - `:enew` : Create a new empty buffer
-* `ctrl-w q` : close split window
-* `ctrl-w o` or `:only` : close all other split windows
 
 
 ## Windows

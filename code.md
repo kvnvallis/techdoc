@@ -3,6 +3,17 @@
 [TOC]
 
 
+## C++
+
+### Compile and run a standalone windows exe in arch linux
+
+Install MinGW, then compile a cpp file and statically link the c and c++ standard libraries, along with _libwinpthread-1.dll_ (so they are all included in the exe). 
+ 
+    sudo pacman -S mingw-w64-gcc
+    x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -static -lwinpthread -o hello.exe hello.cpp
+    wine hello.exe
+
+
 ## Java
 
 ### JUnit Tests

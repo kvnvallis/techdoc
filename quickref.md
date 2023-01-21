@@ -79,6 +79,7 @@ __Fix blurry sprites:__
 
 ## Pacman
 
+* `pacman -Rsp pkgname` : Simulate removing a package and its dependencies
 * `pacman -Qo /usr/bin/appname` : Query what package a file belongs to
 
 

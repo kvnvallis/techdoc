@@ -226,6 +226,15 @@ __Stop mouse from waking computer:__
 * _Control Panel_ > _Mouse_ > _Hardware_ tab > select _HID-compliant mouse_ > _Properties_ > _Change Settings_ > _Power Management_ tab > uncheck _Allow this device to wake the computer_
 
 
+### mtpaint
+
+- `CTRL + LMB` : (color picker) select a color from the canvas
+
+__Set transparency index:__
+
+- Toolbar: _Image_ > _Preferences_ > _Files_ tab > set _Transparency Index_ to the color's index
+
+
 ### Chocolatey
 
 * `choco list -l` : list all locally installed packages

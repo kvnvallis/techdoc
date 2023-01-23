@@ -3,7 +3,7 @@
 [TOC]
 
 
-## C++
+## C / C++
 
 ### Compile and run a standalone windows exe in arch linux
 
@@ -12,6 +12,19 @@ Install MinGW, then compile a cpp file and statically link the c and c++ standar
     sudo pacman -S mingw-w64-gcc
     x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -static -lwinpthread -o hello.exe hello.cpp
     wine hello.exe
+
+
+## Raylib
+
+### config flags
+
+Config flags that can be set with `SetConfigFlags()` are not documented. You can look at the source instead: <https://github.com/raysan5/raylib/blob/master/examples/core/core_window_flags.c>
+
+Set them like this:
+
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    InitWindow(320, 240, "example");
+    SetTargetFPS(60);
 
 
 ## Java

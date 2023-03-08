@@ -95,6 +95,8 @@ __Fix blurry sprites:__
 
 ## Bash / Linux
 
+* `type ls` : check if ls is an alias
+* `\ls` : call the ls command instead of the alias
 * `setfacl --remove-all -R [file]` : Recursively remove all ACLs from a file or folder
 * `ls -i` ; `find / -inum [inode]` : List inodes then find inode (identify hard links)
 * `diff -u oldfile newfile > patchfile` : create a patch file

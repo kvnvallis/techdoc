@@ -95,6 +95,7 @@ __Fix blurry sprites:__
 
 ## Bash / Linux
 
+* `zless /proc/config.gz` : check options kernel was compiled with in arch linux
 * `type ls` : check if ls is an alias
 * `\ls` : call the ls command instead of the alias
 * `setfacl --remove-all -R [file]` : Recursively remove all ACLs from a file or folder

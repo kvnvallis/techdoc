@@ -193,6 +193,7 @@ __Fix blurry sprites:__
 
 ## Vim
 
+* `:w !sudo tee %` or `:%!sudo tee %` : save file as root if you forgot to sudo vim
 * `:qa` : close all tabs and quit
 * `:tabm` : Move tab to front of queue
 * `:hi Error NONE` : disable error highlighting

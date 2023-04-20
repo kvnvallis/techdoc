@@ -95,6 +95,8 @@ __Fix blurry sprites:__
 
 ## Bash / Linux
 
+### Commands
+
 * `zless /proc/config.gz` : check options kernel was compiled with in arch linux
 * `type ls` : check if ls is an alias
 * `\ls` : call the ls command instead of the alias
@@ -109,19 +111,9 @@ __Fix blurry sprites:__
 * `sudo -i -u username` : Open a login shell like with _su - username_
 * `useradd -r -s /sbin/nologin username` : Create a system user for running services (do not create home folder)
 * `cat -A` : Show tabs, newlines, and carriage returns
-* `Alt-B / Alt-F` : Back/forward one word
-* `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line
-* `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
-* `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
-* `<(echo 'file contents')` : Pass the output of a command to another command that expects a file
 * `set -x` : Print all commands before executing them (does not wait before execution)
 
-### Parameter Expansion
-
-* `${filename##*.}` : Get the file extension from a standard filename
-* `${filename%.*}` : Remove the file extension from a standard filename
-
-### Other
+__Optional Packages:__
 
 - `zip -r archive.zip ./folder` : Add a folder and its contents to a zip archive
 - `transmission-remote -t all --find /mnt/btdl` : Set new location for all existing torrents
@@ -129,6 +121,26 @@ __Fix blurry sprites:__
 - `pandoc -s file.docx --wrap=none -t markdown -o file.md` : Convert word doc to markdown
 - `dpkg -L packagename` : List all files installed for package
 - `sudo ufw allow in on eth0 from 192.168.1.0/24 to 192.168.1.2 port 8096 comment 'Jellyfin'` : example ufw rule
+
+### Shell Programming
+
+* `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
+* `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
+
+__Process substitution:__
+
+* `<(echo 'file contents')` : Pass the output of a command to another command that expects a file
+
+__Parameter expansion:__
+
+* `${filename##*.}` : Get the file extension from a standard filename
+* `${filename%.*}` : Remove the file extension from a standard filename
+
+### Shortcuts
+
+* `Ctrl-X Ctrl-E` : Open $VISUAL editor to edit then run a command
+* `Alt-B / Alt-F` : Back/forward one word
+* `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line
 
 
 ## Python

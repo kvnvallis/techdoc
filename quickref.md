@@ -133,6 +133,8 @@ __Process substitution:__
 
 __Parameter expansion:__
 
+* `${filename^^}` : Convert to uppercase
+* `${filename,,}` : Convert to lowercase
 * `${filename##*.}` : Get the file extension from a standard filename
 * `${filename%.*}` : Remove the file extension from a standard filename
 

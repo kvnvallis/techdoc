@@ -77,8 +77,9 @@ __Fix blurry sprites:__
 * `wineconsole` : Load cmd.exe CUI in new window
 
 
-## Pacman
+## Pacman / Yay
 
+* `yay -Sa pkgname --mflags "--noextract" : Prevent your edits to the source code from being overwritten
 * `pacman -Rsp pkgname` : Simulate removing a package and its dependencies
 * `pacman -Qo /usr/bin/appname` : Query what package a file belongs to
 

@@ -21,8 +21,9 @@ ___Vim___ uses its own flavor of regex that is similar in functionality to Perl.
 - (vim) `s/\(.\+\)$/\1  /` : Add a double space to end of each non-empty line
 
 
-## ffmpeg
+## ffmpeg / video
 
+- `mkvmerge -o disc1.mkv --split chapters:7,13,19,25 B1_t00.mkv` : Split mkv by chapter (use `chapters:all` for one file per chapter)
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps
 - `ffprobe -analyzeduration 100M -probesize 100M dvd.iso` : Seek ahead on disc to discover subtitle or other streams
 

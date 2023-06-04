@@ -126,6 +126,7 @@ __Optional Packages:__
 
 ### Shell Programming
 
+* `while read filename; do rm "$filename"; done < ~/delete-these-files.txt` : Delete a list of files (supports spaces, no quoting, one file per line)
 * `"$(dirname -- "$(readlink -f "$0")")"` : Get directory of script even when called from a symlink
 * `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
 * `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output

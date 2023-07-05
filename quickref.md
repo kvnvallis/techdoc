@@ -211,6 +211,8 @@ __Parameter expansion:__
 
 ## Vim
 
+* INSERT `ctrl-r +` : Paste clipboard register from insert mode
+* `"+p` : Paste clipboard register from command mode
 * `:w !sudo tee %` or `:%!sudo tee %` : save file as root if you forgot to sudo vim
 * `:qa` : close all tabs and quit
 * `:tabm` : Move tab to front of queue

@@ -78,8 +78,9 @@ __Fix blurry sprites:__
 * `wineconsole` : Load cmd.exe CUI in new window
 
 
-## Pacman / Yay
+## Package management
 
+* `pkgfile -u && pkgfile mycommand` : Update pkgfile db and find the package which provides *mycommand*
 * `yay -Sa pkgname --mflags "--noextract" : Prevent your edits to the source code from being overwritten
 * `pacman -Rsp pkgname` : Simulate removing a package and its dependencies
 * `pacman -Qo /usr/bin/appname` : Query what package a file belongs to

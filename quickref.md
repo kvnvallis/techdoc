@@ -209,6 +209,10 @@ __Parameter expansion:__
 - `core.autocrlf input` : checkout as LF, commit as LF
 - `core.autocrlf false` : no conversions on checkout or commit
 
+### GitHub
+
+- `t` : search for files in a repository
+
 
 ## Vim
 

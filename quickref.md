@@ -161,6 +161,7 @@ __Parameter expansion:__
 
 ### Django
 
+- `./manage.py changepassword myuser` : Change password for myuser
 - `>>> list(Tags.objects.filter(mdfile_id=46).values_list('tag', flat=True))` : Create a list from queryset values
 * `python manage.py makemigrations --dry-run` : Check if migrations exist for any change in the models
 * `python manage.py shell` : Open a django shell where you can import models

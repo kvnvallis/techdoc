@@ -96,7 +96,7 @@ __Fix blurry sprites:__
 * `Ctrl-X` : Delete line and copy to clipboard
 
 
-## Bash / Linux
+## Bash / POSIX / Linux
 
 ### Commands
 
@@ -127,10 +127,12 @@ __Optional Packages:__
 
 ### Shell Programming
 
+* `mkdir myfolder && cd $_` : **$_** holds that last argument to the previous command
 * `while read filename; do rm "$filename"; done < ~/delete-these-files.txt` : Delete a list of files (supports spaces, no quoting, one file per line)
 * `"$(dirname -- "$(readlink -f "$0")")"` : Get directory of script even when called from a symlink
 * `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
 * `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
+
 
 __(BASH) Process substitution:__
 

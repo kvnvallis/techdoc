@@ -80,6 +80,7 @@ __Fix blurry sprites:__
 
 ## Package management
 
+* `pacman -Syuw` : Download packages for upgrade but don't install
 * `pkgfile -u && pkgfile mycommand` : Update pkgfile db and find the package which provides *mycommand*
 * `yay -Sa pkgname --mflags "--noextract" : Prevent your edits to the source code from being overwritten
 * `pacman -Rsp pkgname` : Simulate removing a package and its dependencies

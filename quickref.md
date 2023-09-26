@@ -149,8 +149,10 @@ __Parameter expansion:__
 ### Shortcuts
 
 * `Ctrl-X Ctrl-E` : Open $VISUAL editor to edit then run a command
-* `Alt-B / Alt-F` : Back/forward one word
-* `Ctrl-K / Ctrl-U` : Cut from cursor to end/beginning of line
+* `Alt-B / Alt-F` : Move back/forward one word
+* `Ctrl-K / Ctrl-U` : Delete from cursor to end/beginning of line
+* `Ctrl-W` : Delete back one word
+* `Ctrl-Y` : Put previously deleted text
 
 
 ## Python

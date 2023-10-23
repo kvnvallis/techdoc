@@ -2,6 +2,24 @@
 
 [TOC]
 
+## Javascript ##
+
+### Run script when page is ready
+
+I like to put script tags at the top of the page instead of the footer, but then you have to make sure your script runs after the page is loaded. Wrap your entire script in one of the following:
+
+1. `window.onload = function() {}`
+
+    Replaces load event with your script, which means no other scripts can use the load event. It waits for all resources to finish loading, including images and scripts. 
+    
+2. `window.addEventListener('load', function() {})`
+
+    Same as assigning *window.onload* but lets multiple scripts attach to the load event. 
+
+3. `document.addEventListener('DOMContentLoaded', () => {})`
+
+    Instead of waiting for all resources to load, only wait for the html tags (or more accurately, the DOM). This option is usually the best.
+
 
 ## POSIX
 
@@ -169,39 +187,6 @@ Even if you manually set *i* to equal an integer outside the range of the list, 
     >>> i = 4
     >>> (i + 1) % 4
     1
-
-
-## Git
-
-### Rebase two unrelated histories
-
-You have two branches, *feature* and *main*, where you want all the changes in main to be brought into the history of feature. The branches are unrelated (common was created as an orphan), and feature has a long commit history; So if you checkout feature and run `git rebase common`, you will have to deal with many conflicts as git replays the entire history of feature. 
-
-My solution was to squash all commits on feature into one, so that I only have to deal with conflicts on the most recent changes. This obviously only works if you don't care about preserving the commit history. 
-
-    git checkout feature
-    git rebase --root -i
-
-Then edit the todo so that the oldest commit is reworded and the rest are squashed (`s` or `f`) up to the latest commit.
-
-    1 r 01cc5a08 Removes open div
-    2 s a2b6eecf Restores old fonts
-    3 s 603479ff Cleans left out div
-    4 s 5afdbc33 Update: show logo on landing page 
-
-Or if you're running the newest version of git (2.31.1 for me), you can pass in the oldest commit to `rebase` and squash everything in the todo. Earlier versions of git will complain about there being "no previous commit" if you try this, because it expects you to `pick` at least one.
-
-    $ git rebase -i 01cc5a08
-
-    1 f 01cc5a08 Removes open div
-    2 f a2b6eecf Restores old fonts
-    3 f 603479ff Cleans left out div
-    4 f 5afdbc33 Update: show logo on landing page 
-
-When you have just one commit on feature, you can then easily rebase onto common (modifying the history of feature, but leaving the history of common alone.)
-
-    git checkout feature
-    git rebase common
 
 
 ## Django

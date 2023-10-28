@@ -251,6 +251,12 @@ __Parameter expansion:__
 - `ctrl-6` / `:b#` : switch between previous and current buffer
 - `:enew` : Create a new empty buffer
 
+### marks
+
+* `ma` : set mark labeled _a_ at cursor position
+* `'a` : jump to mark _a_ at beginning of line
+* `''` : jump back to the line from where you jumped
+* `'.` : jump to line of last edit
 
 ## Windows
 

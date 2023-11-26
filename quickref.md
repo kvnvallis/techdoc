@@ -117,6 +117,10 @@ __Fix blurry sprites:__
 * `cat -A` : Show tabs, newlines, and carriage returns
 * `set -x` : Print all commands before executing them (does not wait before execution)
 
+`ls ~/Games/ | grep -E "$(find ./ -maxdepth 1 -name "*" \! -path ./ | cut -c3- | paste -sd '|' -)"`  
+Check if anything exists in the current folder that also exists in another folder. Format output of find command to list all files in current directory as a grep OR regex string ('file1|file2|file3'). Cut off the first 2 chars (start from byte 3) to remove the `./` find prefix, and paste in a new delimeter (replace newline with pipe). Be sure to wrap output of find command in double quotes.
+
+
 __Optional Packages:__
 
 - `zip -r archive.zip ./folder` : Add a folder and its contents to a zip archive

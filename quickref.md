@@ -55,6 +55,12 @@ Mux streams from multiple input files. Remove audio from first file and copy aud
 - `yt-dlp -f "bv[ext=mp4][height=1080]+ba[ext=m4a]"` : combine best 1080p h264 with best aac
 
 
+## Raylib
+
+- __Compile on Linux__ : gcc main.c -o -lraylib -lGL -lm -lpthread -ldl -lrt
+- __Compile on Windows__ : gcc main.c -lraylib -lopengl32 -lgdi32 -lwinmm
+
+
 ## Godot
 
 Note that code in a GD script takes precedence over what you set in the UI. 

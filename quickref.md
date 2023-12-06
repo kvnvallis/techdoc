@@ -57,8 +57,8 @@ Mux streams from multiple input files. Remove audio from first file and copy aud
 
 ## Raylib
 
-- __Compile on Linux__ : gcc main.c -lraylib -lGL -lm -lpthread -ldl -lrt
-- __Compile on Windows__ : gcc main.c -lraylib -lopengl32 -lgdi32 -lwinmm
+- __Compile on Linux__ : `gcc main.c -lraylib -lGL -lm -lpthread -ldl -lrt`
+- __Compile on Windows__ : `gcc main.c -lraylib -lopengl32 -lgdi32 -lwinmm`
 
 
 ## Godot

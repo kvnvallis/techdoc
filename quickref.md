@@ -23,6 +23,7 @@ ___Vim___ uses its own flavor of regex that is similar in functionality to Perl.
 
 ## ffmpeg / video
 
+- `ffmpeg -i in.mkv -vf 'crop=720:380:0:51' out.mkv` : Crop black bars off top and bottom (w:h:x:y) - adjust h first, then y for offset - test with `ffplay -vf`
 - `ffmpeg -i in.mkv -map 0 -c copy -aspect 16:9 out.mkv` : Set the file container's aspect ratio
 - `mkvmerge -o disc1.mkv --split chapters:7,13,19,25 B1_t00.mkv` : Split mkv by chapter (use `chapters:all` for one file per chapter)
 - `ffmpeg -fflags +genpts -i dvd.iso -map 0 -c copy dvd.mkv` : Copy dvd to mkv and generate missing timestamps

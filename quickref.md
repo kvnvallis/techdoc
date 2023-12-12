@@ -41,6 +41,7 @@ Mux streams from multiple input files. Remove audio from first file and copy aud
 
 ### encode recipes
 
+- __Upscale & Encode DVD Subs:__ `ffmpeg -i input.mkv -filter_complex '[0:v][0:s:0]overlay[v]; [v]scale=-1:1080[v]' -map '[v]' -c:v libx264 -crf 18 -aspect 16:9 output.mkv`
 - __Youtube Audio/Image:__ `ffmpeg -loop 1 -i mpv-shot0001.jpg -i commentary.ac3 -c:a copy -c:v libx264 -preset ultrafast -r 1 -vf 'scale=-1:1080' -shortest dvd-commentary.mkv`
 - __8-bit H264 lvl 4__: `ffmpeg -i file.mkv -c:v libx264 -profile:v high -level:v 4.0 -vf format=yuv420p -crf 18 outfile.mkv`
 - __2-Channel AC3__: `ffmpeg -i file.mkv -map 0:a:0 -ar 44100 -ac 2 -c:a ac3 -b:a 224k`

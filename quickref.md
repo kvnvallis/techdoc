@@ -21,6 +21,11 @@ ___Vim___ uses its own flavor of regex that is similar in functionality to Perl.
 - (vim) `s/\(.\+\)$/\1  /` : Add a double space to end of each non-empty line
 
 
+## krita
+
+- __True Canvas-only:__ `Configure Krita > General > Window > Multiple Document Mode: Subwindows` : *Remove the top bar* (After hiding all elements in Canvas-only settings)
+
+
 ## ffmpeg / video
 
 - `ffmpeg -i in.mkv -vf 'crop=720:380:0:51' out.mkv` : Crop black bars off top and bottom (w:h:x:y) - adjust h first, then y for offset - test with `ffplay -vf`

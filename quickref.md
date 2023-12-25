@@ -23,7 +23,8 @@ ___Vim___ uses its own flavor of regex that is similar in functionality to Perl.
 
 ## krita
 
-- __True Canvas-only:__ `Configure Krita > General > Window > Multiple Document Mode: Subwindows` : *Remove the top bar* (After hiding all elements in Canvas-only settings)
+- __Overview (canvas preview):__ `Settings > Dockers > Overview`
+- __True Canvas-only:__ `Settings > Configure Krita > General > Window > Multiple Document Mode: Subwindows` : *Remove the top bar* (After hiding all elements in Canvas-only settings)
 
 
 ## ffmpeg / video

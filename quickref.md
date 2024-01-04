@@ -23,6 +23,10 @@ ___Vim___ uses its own flavor of regex that is similar in functionality to Perl.
 
 ## krita
 
+- `F5` : Brush Editor (otherwise accessible only through *brushes and stuff* toolbar??
+
+---
+
 - __Overview (canvas preview):__ `Settings > Dockers > Overview`
 - __True Canvas-only:__ `Settings > Configure Krita > General > Window > Multiple Document Mode: Subwindows` : *Remove the top bar* (After hiding all elements in Canvas-only settings)
 

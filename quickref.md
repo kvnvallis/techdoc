@@ -3,6 +3,13 @@
 [TOC]
 
 
+## Spreadsheets
+
+I'm using gnumeric (the gnome spreadsheet), but a lot of spreadsheet behavior is pretty standard and works across other applications.
+
+- `ctrl + shift + ;` : enter current time into cell
+
+
 ## Regex
 
 ___Notepad++___ uses [perl regex](https://www.boost.org/doc/libs/1_55_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 

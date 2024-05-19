@@ -21,7 +21,37 @@ I like to put script tags at the top of the page instead of the footer, but then
     Instead of waiting for all resources to load, only wait for the html tags (or more accurately, the DOM). This option is usually the best.
 
 
-## POSIX
+## SHELL
+
+*POSIX-compliant unless otherwise stated*
+
+### Loop through find output
+
+`find -exec` has its limits. Sometimes you want to run more complex code on the output of find. You can do this the bash way or the posix way. Both pipe find output into the next command. Make sure any subsequent commands that expect user input do not take input from stdin. The examples below tell `rm -i` to take input from `/dev/tty` instead. Note that these examples are not complex, so `find -exec rm -i -- {} \;` would be more suitable.
+
+__BASH:__
+
+    # IFS= preserves leading and trailing whitespace
+    # -r preserves backslashes
+    # -d '' interprets null line endings from -print0
+    find ./ -type f -print0 |
+        while IFS= read -r -d '' file; do
+            rm -i -- "$file" < /dev/tty
+        done
+
+__POSIX:__
+
+    # -0 interprets null line endings from -print0
+    # -I {} prevents spaces being collapsed or trimmed
+    find ./ -type f -print0 | xargs -0 -I {} sh -c '
+        for file in "{}"; do
+            echo $0
+            rm -i -- "$file" < /dev/tty
+        done
+    ' sh
+    # 'sh' fills param $0 for the sh command, so that it doesn't consume any
+    # lines from the find output. Any string will work as a placeholder.
+
 
 ### Check if argument is a function
 
@@ -29,7 +59,7 @@ You can call a function by name as the first argument to a script, but it's a go
 
     # Run script args as commands if first arg is a function
     case "$(type -- "$1" 2>/dev/null)" in
-        *function*)
+        *is\ a\ function*)
             "$@"
             ;;
         *)

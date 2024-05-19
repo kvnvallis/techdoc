@@ -7,6 +7,7 @@
 
 I'm using gnumeric (the gnome spreadsheet), but a lot of spreadsheet behavior is pretty standard and works across other applications.
 
+- `ctrl + ;` : enter current date
 - `ctrl + shift + ;` : enter current time into cell
 
 

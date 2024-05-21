@@ -25,6 +25,21 @@ I like to put script tags at the top of the page instead of the footer, but then
 
 *POSIX-compliant unless otherwise stated*
 
+
+### Run code from a heredoc
+
+If you need to run a long command inside a script using `sh -c`, you can put that command in a variable and then expand it. You would otherwise have to write the code inside single-quotes, like `sh -c 'echo code goes here'`. Both ways are fine, but the inline style does not let me reuse my code, and I was not able to find a way to allow any `'` within the surrounding `''`. In the heredoc, all quotes were interpreted correctly and so were backslash-escaped characters, including quotes and newlines. It also works when passing arguments using xargs. 
+
+    code=$(cat << 'EOF'
+        for arg; do
+            echo "$arg"
+        done
+    EOF
+    )
+
+    sh -c "$code" sh all of my args
+
+
 ### Loop through find output
 
 `find -exec` has its limits. Sometimes you want to run more complex code on the output of find. You can do this the bash way or the posix way. Both pipe find output into the next command. Make sure any subsequent commands that expect user input do not take input from stdin. The examples below tell `rm -i` to take input from `/dev/tty` instead. Note that these examples are not complex, so `find -exec rm -i -- {} \;` would be more suitable.
@@ -42,9 +57,8 @@ __BASH:__
 __POSIX:__
 
     # -0 interprets null line endings from -print0
-    # -I {} prevents spaces being collapsed or trimmed
-    find ./ -type f -print0 | xargs -0 -I {} sh -c '
-        for file in "{}"; do
+    find ./ -type f -print0 | xargs -0 sh -c '
+        for file; do
             echo $0
             rm -i -- "$file" < /dev/tty
         done

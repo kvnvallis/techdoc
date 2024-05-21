@@ -37,7 +37,7 @@ If you need to run a long command inside a script using `sh -c`, you can put tha
     EOF
     )
 
-    sh -c "$code" sh all of my args
+    sh -c "$code" mycode all of my args
 
 
 ### Loop through find output

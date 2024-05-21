@@ -28,6 +28,8 @@ I like to put script tags at the top of the page instead of the footer, but then
 
 ### Run code from a heredoc
 
+__NOTE:__ `'EOF'` must be quoted or all of the vars will come up empty. Quotes around EOF disable parameter expansion, which means the vars will be preserved so they can be expanded by `sh -c`.
+
 If you need to run a long command inside a script using `sh -c`, you can put that command in a variable and then expand it. You would otherwise have to write the code inside single-quotes, like `sh -c 'echo code goes here'`. Both ways are fine, but the inline style does not let me reuse my code, and I was not able to find a way to allow any `'` within the surrounding `''`. In the heredoc, all quotes were interpreted correctly and so were backslash-escaped characters, including quotes and newlines. It also works when passing arguments using xargs. 
 
     code=$(cat << 'EOF'

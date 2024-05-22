@@ -74,7 +74,7 @@ __POSIX:__
 You can call a function by name as the first argument to a script, but it's a good idea to check if the function exists, otherwise your script will run any command that you pass as the first arg. The case statement checks if the output of *type* matches `*function*`. AFAIK you have to use a case statement (not an if) to match glob patterns.
 
     # Run script args as commands if first arg is a function
-    case $(type -- "$1") in
+    case $(type -- "$1" 2>/dev/null) in
         *function*)
             "$@"
             ;;

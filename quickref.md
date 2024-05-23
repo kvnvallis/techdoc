@@ -125,7 +125,7 @@ __Fix blurry sprites:__
 * `Ctrl-X` : Delete line and copy to clipboard
 
 
-## Bash / POSIX / Linux
+## Shell
 
 ### Commands
 
@@ -160,6 +160,7 @@ __Optional Packages:__
 
 ### Shell Programming
 
+* `find ./ -name \*$'\n'\* -o -name \*$'\r'\*` : Reveal filenames containing newlines or carriage returns
 * `mkdir myfolder && cd $_` : **$_** holds that last argument to the previous command
 * `while read filename; do rm "$filename"; done < ~/delete-these-files.txt` : Delete a list of files (supports spaces, no quoting, one file per line)
 * `"$(dirname -- "$(readlink -f "$0")")"` : Get directory of script even when called from a symlink

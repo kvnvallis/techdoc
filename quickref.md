@@ -145,11 +145,7 @@ __Fix blurry sprites:__
 * `cat -A` : Show tabs, newlines, and carriage returns
 * `set -x` : Print all commands before executing them (does not wait before execution)
 
-`ls ~/Games/ | grep -E "$(find ./ -maxdepth 1 -name "*" \! -path ./ | cut -c3- | paste -sd '|' -)"`  
-Check if anything exists in the current folder that also exists in another folder. Format output of find command to list all files in current directory as a grep OR regex string ('file1|file2|file3'). Cut off the first 2 chars (start from byte 3) to remove the `./` find prefix, and paste in a new delimeter (replace newline with pipe). Be sure to wrap output of find command in double quotes.
-
-
-__Optional Packages:__
+__Additional Packages:__
 
 - `zip -r archive.zip ./folder` : Add a folder and its contents to a zip archive
 - `transmission-remote -t all --find /mnt/btdl` : Set new location for all existing torrents
@@ -158,15 +154,23 @@ __Optional Packages:__
 - `dpkg -L packagename` : List all files installed for package
 - `sudo ufw allow in on eth0 from 192.168.1.0/24 to 192.168.1.2 port 8096 comment 'Jellyfin'` : example ufw rule
 
-### Shell Programming
+__find Recipes:__
 
 * `find ./ -name \*$'\n'\* -o -name \*$'\r'\*` : Reveal filenames containing newlines or carriage returns
+
+find ./ -type l \! -xtype l -printf '%P\0' | xargs -0 -I {} cp --parents -av -- {} /mnt/hdd0/symlinkbak/`  
+Copy unbroken symlinks from the current directory to the given destination. Whatever folders you see in the find output will be created at the destination as well. This will not work if you pass anything other than `./` to find. You must cd into the directory containing the tree you wish to duplicate. 
+
+`ls ~/Games/ | grep -E "$(find ./ -maxdepth 1 -name "*" \! -path ./ | cut -c3- | paste -sd '|' -)"`  
+Check if anything exists in the current folder that also exists in another folder. Format output of find command to list all files in current directory as a grep OR regex string ('file1|file2|file3'). Cut off the first 2 chars (start from byte 3) to remove the `./` find prefix, and paste in a new delimeter (replace newline with pipe). Be sure to wrap output of find command in double quotes.
+
+### Shell Programming
+
 * `mkdir myfolder && cd $_` : **$_** holds that last argument to the previous command
 * `while read filename; do rm "$filename"; done < ~/delete-these-files.txt` : Delete a list of files (supports spaces, no quoting, one file per line)
 * `"$(dirname -- "$(readlink -f "$0")")"` : Get directory of script even when called from a symlink
 * `if ./exitzero.sh ; then echo success; else echo nonzero; fi` : Return success if script runs __exit 0__
 * `2>&1` : Redirect stderr to stdout so error messages get sent to the same place as standard output
-
 
 __(BASH) Process substitution:__
 

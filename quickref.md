@@ -158,7 +158,7 @@ __find Recipes:__
 
 * `find ./ -name \*$'\n'\* -o -name \*$'\r'\*` : Reveal filenames containing newlines or carriage returns
 
-find ./ -type l \! -xtype l -printf '%P\0' | xargs -0 -I {} cp --parents -av -- {} /mnt/hdd0/symlinkbak/`  
+`find ./ -type l \! -xtype l -printf '%P\0' | xargs -0 -I {} cp --parents -av -- {} /mnt/hdd0/symlinkbak/`  
 Copy unbroken symlinks from the current directory to the given destination. Whatever folders you see in the find output will be created at the destination as well. This will not work if you pass anything other than `./` to find. You must cd into the directory containing the tree you wish to duplicate. 
 
 `ls ~/Games/ | grep -E "$(find ./ -maxdepth 1 -name "*" \! -path ./ | cut -c3- | paste -sd '|' -)"`  

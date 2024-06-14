@@ -259,6 +259,8 @@ __Parameter expansion:__
 
 ## Vim
 
+* `:let @@="test"` : fill unamed register with string (for putting with p)
+* `CTRL + V` then `TAB` : insert literal tab character in command mode (`:`)
 * `gUiw` : capitalize word below cursor
 * INSERT `ctrl-r +` : Paste clipboard register from insert mode
 * `"+p` : Paste clipboard register from command mode

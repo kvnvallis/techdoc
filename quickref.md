@@ -259,6 +259,7 @@ __Parameter expansion:__
 
 ## Vim
 
+* `&` : repeat last substitution (`:s/this/that`)
 * `:let @@="test"` : fill unamed register with string (for putting with p)
 * `CTRL + V` then `TAB` : insert literal tab character in command mode (`:`)
 * `gUiw` : capitalize word below cursor

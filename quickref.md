@@ -73,7 +73,9 @@ Mux streams from multiple input files. Remove audio from first file and copy aud
 
 ### yt-dlp
 
-- `yt-dlp -f "bv[ext=mp4][height=1080]+ba[ext=m4a]"` : combine best 1080p h264 with best aac
+- `yt-dlp -f "bv[vcodec^=avc][height=1080]+ba[ext=m4a]"` : combine best 1080p h264 with best aac
+- `yt-dlp -S "res:1080,codec:avc:m4a" : best 1080p mp4 using newer syntax
+- `yt-dlp -f "wv[vcodec^=avc][protocol^=http]" --embed-chapters` : get chapter metadata with the worst mp4 video
 
 
 ## Raylib

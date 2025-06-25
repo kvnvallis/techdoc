@@ -132,6 +132,7 @@ __Fix blurry sprites:__
 
 ### Commands
 
+* `ping google.com -M do -c 1 -s 1472` : send the largest possible ping packet without fragmentation
 * `zless /proc/config.gz` : check options kernel was compiled with in arch linux
 * `type ls` : check if ls is an alias
 * `\ls` : call the ls command instead of the alias
